@@ -1,0 +1,35 @@
+version: '2'
+services:
+  mysql-master:
+    image: docker.io/mysql
+    networks:
+      jznet:
+        ipv4_address: 172.18.4.24
+    volumes:
+      - /root/data/mysql-master:/var/lib/mysql
+      - ./master.cnf:/etc/mysql/my.cnf
+    ports:
+      - "3316:3306"
+    environment:
+      - MYSQL_DATABASE=root
+      - MYSQL_ROOT_PASSWORD=123456
+  mysql-slave:
+    image: docker.io/mysql
+    networks:
+      jznet:
+        ipv4_address: 172.18.4.25
+    volumes:
+      - /root/data/mysql-slave:/var/lib/mysql
+      - ./slave.cnf:/etc/mysql/my.cnf
+    ports:
+      - "3317:3306"
+    environment:
+      - MYSQL_DATABASE=root
+      - MYSQL_ROOT_PASSWORD=123456
+networks:
+  jznet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.4.0/26

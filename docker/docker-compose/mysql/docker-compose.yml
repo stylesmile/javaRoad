@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mysql:
+    network_mode: "host"
+    environment:
+      MYSQL_ROOT_PASSWORD: "yourpassword"
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'yourpassword'
+    image: "docker.io/mysql:latest"
+    restart: always
+    volumes:
+      - "./db:/var/lib/mysql"
+      - "./conf/my.cnf:/etc/my.cnf"
+      - "./init:/docker-entrypoint-initdb.d/"
