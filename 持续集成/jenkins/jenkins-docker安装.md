@@ -15,6 +15,8 @@ docker container update  example --cpus="1" --memory="1g"  --memory-swap="-1"
 限制最多使用一个cpu,最多用一g内存
 
 
+##查看 密码
+cat /root/.jenkins/secrets/initialAdminPassword
 
 ##官网
 https://www.jenkins.io/
