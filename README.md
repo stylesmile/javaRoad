@@ -17,6 +17,10 @@ java学习之路，包含基础、高并发、高可用、分布式、微服务�
 -[Linux]()
     -[ubuntu]()
         -[dpkg用法](linux/ubuntu/dpkg.md)
+        
+-[问题排查](问题排查)
+    -[JAVA 线上故障排查完整套路，从 CPU、磁盘、内存、网络、GC 一条龙.md](问题排查/JAVA%20线上故障排查完整套路，从%20CPU、磁盘、内存、网络、GC%20一条龙.md)
+        -[dpkg用法](linux/ubuntu/dpkg.md)
 
 
 #### 安装教程
