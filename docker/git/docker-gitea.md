@@ -1,0 +1,1 @@
+docker run -d --name gitea --restart=always  -p 422:22 -p 10082:3000 gitea/gitea
