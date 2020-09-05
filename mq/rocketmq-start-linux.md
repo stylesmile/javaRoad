@@ -29,12 +29,16 @@ sh bin/mqshutdown broker
 namesrvAddr = 你的公网IP:9876
 brokerIP1=你的公网IP
 nohup sh mqbroker -n localhost:9876 -c ../conf/broker.conf autoCreateTopicEnable=true &
-nohup sh bin/mqbroker -n localhost:9876 -c conf/broker.conf &
+nohup sh bin/mqbroker -n localhost:9876 -c conf/broker.conf autoCreateTopicEnable=true &
+tail -f ~/logs/rocketmqlogs/broker.log 
 
 ##创建topic
 bin/mqadmin updatetopic -n localhost:9876 -c DefaultCluster -t test_topic
+bin/mqadmin updatetopic -n localhost:9876 -c DefaultCluster -t app_topic
 
 ##查看topic
 bin/mqadmin topicList -n localhost:9876 -c DefaultCluster
+
+[docker安装rocketmq](../docker/mq/docker-rocketmq.md)
 
 
