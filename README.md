@@ -19,6 +19,7 @@ java学习之路，包含基础、高并发、高可用、分布式、微服务�
 -[Linux]()
     -[ubuntu]()
         -[dpkg用法](linux/ubuntu/dpkg.md)
+    -[linux编译安装nginx.md](linux/linux编译安装nginx.md) 
 -[持续集成](持续集成)
     -[jenkins](持续集成/jenkins)
         -[jenkins安装](持续集成/jenkins/jenkins安装.md)
