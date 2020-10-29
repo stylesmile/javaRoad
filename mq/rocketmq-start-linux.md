@@ -38,6 +38,7 @@ bin/mqadmin updatetopic -n localhost:9876 -c DefaultCluster -t app_topic
 
 ##查看topic
 bin/mqadmin topicList -n localhost:9876 -c DefaultCluster
+bin/mqadmin topicClusterList -n localhost:9876 -c DefaultCluster
 
 [docker安装rocketmq](../docker/mq/docker-rocketmq.md)
 
