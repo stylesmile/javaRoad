@@ -22,6 +22,10 @@ docker update --restart=always gitlab
 
 # gitlab.rb文件内容默认全是注释
 $ vim /home/gitlab/config/gitlab.rb
+# 打开文件
+vi /etc/gitlab/gitlab.rb
+
+# 这个文件是全注释掉了的，所以直接在首行添加如下配置
 # 配置http协议所使用的访问地址,不加端口号默认为80
 external_url 'http://192.168.199.231'
 
@@ -30,6 +34,10 @@ gitlab_rails['gitlab_ssh_host'] = '192.168.199.231'
 gitlab_rails['gitlab_shell_ssh_port'] = 222 # 此端口是run时22端口映射的222端口
 :wq #保存配置文件并退出
 修改gitlab.rb文件
+####让修改后的配置生效
+gitlab-ctl reconfigure
+####重启gitlab
+gitlab-ctl restart
 # 重启gitlab容器
 $ docker restart gitlab
 此时项目的仓库地址就变了。如果ssh端口地址不是默认的22，就会加上ssh:// 协议头

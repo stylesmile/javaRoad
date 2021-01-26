@@ -20,7 +20,7 @@ tail -f ~/logs/rocketmqlogs/namesrv.log
 ##启动 broker
 nohup sh bin/mqbroker -n localhost:9876 &
 ###查看日志
-tail -f ~/logs/rocketmqlogs/broker.log 
+tail -f ~/logs/rocketmqlogs/broker.log
 ###停止
 sh bin/mqshutdown namesrv
 sh bin/mqshutdown broker
