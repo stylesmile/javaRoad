@@ -20,7 +20,7 @@ tail -f ~/logs/rocketmqlogs/namesrv.log
 ##启动 broker
 nohup sh bin/mqbroker -n localhost:9876 &
 ###查看日志
-tail -f ~/logs/rocketmqlogs/broker.log 
+tail -f ~/logs/rocketmqlogs/broker.log
 ###停止
 sh bin/mqshutdown namesrv
 sh bin/mqshutdown broker
@@ -38,6 +38,7 @@ bin/mqadmin updatetopic -n localhost:9876 -c DefaultCluster -t app_topic
 
 ##查看topic
 bin/mqadmin topicList -n localhost:9876 -c DefaultCluster
+bin/mqadmin topicClusterList -n localhost:9876 -c DefaultCluster
 
 [docker安装rocketmq](../docker/mq/docker-rocketmq.md)
 

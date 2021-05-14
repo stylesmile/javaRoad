@@ -15,3 +15,18 @@ config get dir
 把dump.rdb替换
 /var/lib/redis的dump.rdb
 
+
+
+1.redis-cli 进入客户端
+redis-cli -h 127.0.0.1 -p 6379 -a "mypassword"
+redis-cli -h 192.168.0.41 -p 6380
+redis-cli -h 192.168.0.36 -p 6380
+2.连接主
+      >  slaveof ip port   
+      >  slaveof 192.168.0.36 6380   
+3.info查看是否复制成功
+4.断开主
+    > slaveof no one
+    SLAVEOF NO ONE
+
+
