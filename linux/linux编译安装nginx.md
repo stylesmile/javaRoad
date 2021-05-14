@@ -1,21 +1,14 @@
-1下载
-
+##1.下载
 http://nginx.org/en/download.html
-2.解压
-
+##2.解压
 tar zxvf nginx-1.19.2.tar.gz
-
-3.进入文件夹
-
+##3.进入文件夹
 cd nginx-1.19.2
-
-4.配置
-
+##4.配置
 ./configure --prefix=/usr/local/nginx
-
 正常的编译安装/卸载
 源码的安装一般由3个步骤组成：
- 
+###配置详解
 配置(configure)
 编译(make)
 安装(make install)
