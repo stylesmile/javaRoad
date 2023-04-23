@@ -1,3 +1,6 @@
+# redis 密码 123456
+docker run --name redis -d -p 6379:6379 redis redis-server --appendonly yes --requirepass "123456"
+
 docker run --name redis -d -p 6380:6379 redis --appendonly yes 
 docker run --name redis -d -p 6379:6379 redis --appendonly yes 
 docker run --name redis -d -p 6379:6379 redis --appendonly yes -v /root/db
