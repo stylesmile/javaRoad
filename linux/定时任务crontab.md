@@ -28,3 +28,6 @@ MAILTO=root
 重启
 systemctl restart crond
 service crond restart
+
+
+
