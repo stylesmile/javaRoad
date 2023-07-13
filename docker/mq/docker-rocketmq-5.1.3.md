@@ -24,6 +24,6 @@ docker pull styletang/rocketmq-console-ng
 
 后台启动 命令:
 
-docker run -d --restart=always -e "JAVA_OPTS=-Drocketmq.config.namesrvAddr=172.16.4.240:9876 -Drocketmq.config.isVIPChannel=false" -p 8181:8080 -t styletang/rocketmq-console-ng
+docker run -d --restart=always -e "JAVA_OPTS=-Drocketmq.config.namesrvAddr=172.16.4.240:9876 -Drocketmq.config.isVIPChannel=false" -p 8181:8080 -t styletang/rocketmq-console-ng --name rocketmq-console
 
 说明: namesrvAddr 是你nameServer的地址
