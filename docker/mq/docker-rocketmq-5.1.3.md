@@ -15,3 +15,15 @@ runbroker.sh文件中的 xmx xms设置
 docker logs -f mqbroker
 #####查看ip
 docker inspect nameserver
+
+
+## rocketmq-console
+拉取 命令:
+
+docker pull styletang/rocketmq-console-ng
+
+后台启动 命令:
+
+docker run -d --restart=always -e "JAVA_OPTS=-Drocketmq.config.namesrvAddr=172.16.4.240:9876 -Drocketmq.config.isVIPChannel=false" -p 8181:8080 -t styletang/rocketmq-console-ng
+
+说明: namesrvAddr 是你nameServer的地址
