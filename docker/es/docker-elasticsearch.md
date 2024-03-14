@@ -25,3 +25,11 @@ b0e9f9f047e6：镜像id
 ## 4、开机启动 
 docker update es --restart=always
 ```
+
+## es 8
+官网文档地址
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+```dock
+docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+```
+
