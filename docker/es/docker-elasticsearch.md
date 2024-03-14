@@ -5,13 +5,18 @@ es6
 docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "cluster.name=elasticsearch" -e "node.name=elasticsearch" docker.elastic.co/elasticsearch/elasticsearch:6.6.1
 
 ## es7
+```docker
+docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.13.0
+```
+
 ```
 ## 1、拉去镜像
 docker pull docker.io/elasticsearch:7.1.1
 ## 2、查看镜像
 docker images
 ## 3、运行容器启动 Elasticsearch
-docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" b0e9f9f047e6
+docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.io/elasticsearch:7.1.1
+docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.13.0
 3.1、参数解释：
 -d：后台启动
 --name：容器名称
