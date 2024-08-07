@@ -17,6 +17,7 @@ mongodump -h 192.168.0.36:27015 -d tasks --username "tasks" --password "admin123
 
 mongodump -h localhost:27017 --username "root" --password "root123456!" --out /root/mongo-back/2020-0327-1551-test32
 mongodump -h localhost:27017 --username "root" --password "root123456!" --out /root/mongo-back/2020-0327-1551-test32
+mongodump -h localhost:27017 --username "root" --password "root123456!" --out /root/mongo-back/2020-0327-1551-test32
 #mongo32备份
 mongodump -h localhost:27017 --out /root/mongo-back/2020-0327-1551-test32
 
@@ -50,6 +51,8 @@ mongorestore -h 127.0.0.1:27015 -d tasks --username "tasks" --password "admin123
 mongorestore -h 127.0.0.1:27015 -d tasks --username "tasks" --password "admin123456!" /root/mongo-back/2020-0512-1810-test8/tasks
 mongorestore -h 127.0.0.1:27015 -d tasks --username "tasks" --password "admin123456!" //root/mongo-back/2020-0527-test/tasks
 mongorestore -h 127.0.0.1:27014 -d tasks --username "tasks" --password "admin123456!" /root/mongo-back/2020-0722-0703-pro/tasks
+
+
 
 
 
