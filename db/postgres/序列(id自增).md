@@ -1,12 +1,13 @@
 ### 创建序列
 ```pg
-CREATE SEQUENCE my_sequence
-    INCREMENT BY 1
-    MINVALUE 1
-    MAXVALUE 10000
-    START WITH 1
-    CACHE 1
-    CYCLE;
+
+CREATE SEQUENCE if not exists id_seq_im_friend
+INCREMENT 1
+MINVALUE 1
+MAXVALUE 9223372036854775807
+START 10000000
+CACHE 1;
+alter table im_friend alter column "id" set default nextval('id_seq_im_friend');
 ```
 ```angular2html
 CREATE SEQUENCE sequence_name
