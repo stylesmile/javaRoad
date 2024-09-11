@@ -4,29 +4,22 @@ https://docs.percona.com/percona-server-for-mongodb/7.0/install/docker.html#__ta
 https://hub.docker.com/r/percona/percona-server-mongodb
 ```
 
-```percona-server-mongodb
+```percona-server-mongodb单机
 sudo docker run -d --name mongo7 \
        -e MONGO_INITDB_ROOT_USERNAME=admin \
        -e MONGO_INITDB_ROOT_PASSWORD=admin123456 \
        -p 27013:27017 \
        percona/percona-server-mongodb:7.0
 ```
-```percona-server-mongodb
-sudo docker run -d --name mongo7 \
-       -e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
-       -e MONGO_INITDB_ROOT_PASSWORD=admin123456 \
-       -p 27013:27017 \
-       percona/percona-server-mongodb:7.0 \
-       mongod --replSet appSet 
+```percona-server-mongodb副本集
+sudo docker run --rm -d --restart=always --name mongo7 -p 27013:27017 \
+percona/percona-server-mongodb:7.0 --port=27017 --replSet rs
 ```
 
 ```
-```mongo
-sudo docker run -d -p 27015:27017 --name mongo70  mongo:7 mongod --dbpath /data/db --replSet appSet
-```
 已管理员身份进入容器
 ```mongo
-sudo docker exec -it mongo70 mongosh admin
+sudo docker exec -it mongo7 mongosh admin
 ```
 
 初始化副本集
