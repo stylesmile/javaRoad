@@ -1,4 +1,16 @@
+```angular2html
+sudo docker run --name jenkins -p 9080:8080 -p 50000:50000  -d jenkins/jenkins:lts
+```
+### 查看日志
+```
+sudo docker logs -f jenkins
+```
+
+
 ### 下载jenkins
+
+
+
 https://mirrors.jenkins.io/war-stable/
 ### 下载docker镜像
 docker pull ibm-semeru-runtimes:open-21.0.4.1_7-jdk-jammy
