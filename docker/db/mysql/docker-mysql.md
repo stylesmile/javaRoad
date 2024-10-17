@@ -6,6 +6,13 @@ docker run --privileged -d -p 3305:3306 \
 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci \
 --character-set-client-handshake=FALSE
 ```
+```
+docker run --privileged -d -p 3301:3306 \
+--name mysql --restart=always -e TZ=Asia/Shanghai \
+-e MYSQL_ROOT_PASSWORD=db123456 mysql:8 \
+--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci \
+--character-set-client-handshake=FALSE
+```
 
 该 docker run 命令的具体功能如下：
 启动容器：
