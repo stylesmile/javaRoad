@@ -1,16 +1,18 @@
 ### docker 安装 mysql
-```angular2html
-docker run --privileged -d -p 3305:3306 \
+```
+docker run --privileged -d -p 3304:3306 \
 --name mysql --restart=always -e TZ=Asia/Shanghai \
 -e MYSQL_ROOT_PASSWORD=root -v /mnt/mysql:/var/lib/mysql mysql:8 \
 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci \
 --character-set-client-handshake=FALSE
 ```
 ```
-docker run --privileged -d -p 3301:3306 \
---name mysql --restart=always -e TZ=Asia/Shanghai \
--e MYSQL_ROOT_PASSWORD=db123456 mysql:8 \
---character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci \
+sudo docker run --privileged -d -p 3304:3306 \
+--name mysql8 --restart=always -e TZ=Asia/Shanghai \
+-e MYSQL_ROOT_PASSWORD=db123456 \
+mysql:8.0 \
+--character-set-server=utf8mb4 \
+--collation-server=utf8mb4_unicode_ci \
 --character-set-client-handshake=FALSE
 ```
 
