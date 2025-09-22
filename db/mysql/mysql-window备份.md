@@ -1,0 +1,1 @@
+D:\BtSoft\mysql\MySQL8.0\bin\mysqldump -uroot -p"123.zxc" --all-databases > D:\Backup\db_backupdatabase_%d%.sql
