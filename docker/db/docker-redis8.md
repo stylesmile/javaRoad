@@ -1,7 +1,7 @@
 安装
 sudo docker run --name redis -d --restart=always -p 6379:6379 redis:8 redis-server --appendonly yes --requirepass "123456"
 
-sudo docker run --name redis -d --restart=always -p 6379:6379 redis:8 redis-server --requirepass "123456"
+sudo docker run --name redis -d --restart=always -p 6379:6379 redis:8 redis-server --requirepass "db123456"
 
 123456是密码
 # 
