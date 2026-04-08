@@ -28,6 +28,8 @@ $ docker commit 3a09b2588478 mynewimage
 $ docker save mynewimage > /tmp/mynewimage.tar
 or
 $ docker save mynewimage -o /tmp/mynewimage.tar
+$ docker save mongo:8 -o /tmp/mongo8.tar
+$ docker save redis:8 -o /tmp/redis8.tar
 
 
 
