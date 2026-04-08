@@ -1,7 +1,8 @@
 ### 安装
 ```install
 ## 非副本集
-sudo docker run -d --restart=always -p 27018:27017 --name mongo7  mongo:7
+sudo docker run -d --restart=always -p 27017:27017 --name mongo7  mongo:7
+sudo docker run -d --restart=always -p 27017:27017 --name mongo8  mongo:8
 
 ## 副本集
 sudo docker run -d -p 27011:27017 --name mongo8  mongo:8 --replSet appSet

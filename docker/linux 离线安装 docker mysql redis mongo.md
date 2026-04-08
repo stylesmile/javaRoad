@@ -26,6 +26,9 @@ $ docker commit 3a09b2588478 mynewimage
 3、把 mynewimage 镜像保存成 tar 文件
 
 $ docker save mynewimage > /tmp/mynewimage.tar
+or
+$ docker save mynewimage -o /tmp/mynewimage.tar
+
 
 
 
