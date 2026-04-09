@@ -3,6 +3,10 @@
 ## 非副本集
 sudo docker run -d --restart=always -p 27017:27017 --name mongo7  mongo:7
 sudo docker run -d --restart=always -p 27017:27017 --name mongo8  mongo:8
+sudo docker run -d --restart=always -p 27017:27017 -v /data/mongo8/data/db:/data/db --name mongo8-2 mongo:8  mongod --dbpath /data/db
+
+
+sudo docker run -d -p 27011:27017 --name mongo70  mongo:8 mongod --dbpath /data/db --replSet appSet
 
 ## 副本集
 sudo docker run -d -p 27011:27017 --name mongo8  mongo:8 --replSet appSet
