@@ -7,9 +7,19 @@ docker run --privileged -d -p 3304:3306 \
 --character-set-client-handshake=FALSE
 ```
 ```
-sudo docker run --privileged -d -p 3304:3306 \
+sudo docker run --privileged -d -p 3306:3306 \
 --name mysql8 --restart=always -e TZ=Asia/Shanghai \
 -e MYSQL_ROOT_PASSWORD=db123456 \
+mysql:8.0 \
+--character-set-server=utf8mb4 \
+--collation-server=utf8mb4_unicode_ci \
+--character-set-client-handshake=FALSE
+```
+
+```
+sudo docker run --privileged -d -p 3306:3306 \
+--name mysql8 --restart=always -e TZ=Asia/Shanghai \
+-e MYSQL_ROOT_PASSWORD=123456 \
 mysql:8.0 \
 --character-set-server=utf8mb4 \
 --collation-server=utf8mb4_unicode_ci \
