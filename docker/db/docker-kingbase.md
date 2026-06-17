@@ -33,7 +33,10 @@ docker run -d \
 --restart always \
 "kingbase_v009r001c002b0014_single_x86:v1"
 
-
+## 初始化数据库
 ksql -h 127.0.0.1 -p 54321 -U system -d jlplatform -f /docker-entrypoint-initdb.d/init.sql
 
 ksql -h 127.0.0.1 -U coder -W 123456 -d db2 -f /opt/kingbase/mydata/init.sql
+
+## 连接数据库 db2
+ksql -h 127.0.0.1 -U coder -W 123456 -d db2 
