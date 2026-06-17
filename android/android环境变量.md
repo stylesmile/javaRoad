@@ -3,23 +3,25 @@
 
 Android-Sdk
 
-例如： C:\Users\<用户名>\AppData\Local\Android\Sdk
+例如： D:\software-program\Android-SDK
+例如： C:\Users\32398\AppData\Local\Android\Sdk
+
+例如： ~/Library/Android/sdk
 
 更新 PATH 变量 在系统变量中的 Path 添加以下路径：
 
 %ANDROID_HOME%\platform-tools
 %ANDROID_HOME%\tools
-%ANDROID_HOME%\build-tools\
+%ANDROID_HOME%\build-tools
 
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
 ## linux
 
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 %ANDROID_HOME%\platform-tools
 %ANDROID_HOME%\tools
-%ANDROID_HOME%\build-tools\<版本号>
+%ANDROID_HOME%\build-tools\
 
 打开终端，编辑 Shell 配置文件：
 
