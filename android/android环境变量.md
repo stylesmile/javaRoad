@@ -3,6 +3,7 @@
 
 Android-Sdk
 
+例如： D:\software-program\ANDROID_HOME
 例如： D:\software-program\Android-SDK
 例如： C:\Users\32398\AppData\Local\Android\Sdk
 
