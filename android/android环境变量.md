@@ -2,7 +2,7 @@
 新建系统变量 变量名：ANDROID_HOME 变量值：填写 Android SDK 的安装路径，
 
 Android-Sdk
-
+win
 例如： D:\software-program\ANDROID_HOME
 例如： D:\software-program\Android-SDK
 例如： C:\Users\32398\AppData\Local\Android\Sdk
@@ -42,3 +42,13 @@ source ~/.bash_profile # 或 ~/.zshrc
 打开命令行窗口，输入以下命令：
 
 adb version
+
+## mac
+export ANDROID_HOME=/Volumes/soft/software/ANDROID_HOME
+export GRADLE_USER_HOME=/Volumes/soft/software/GRADLE_USER_HOME
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
+
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\build-tools\
