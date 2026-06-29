@@ -48,6 +48,11 @@ export ANDROID_HOME=/Volumes/soft/software/ANDROID_HOME
 export GRADLE_USER_HOME=/Volumes/soft/software/GRADLE_USER_HOME
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
+v2
+No such file or directory
+export ANDROID_HOME=/Users/ccc/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
 
 %ANDROID_HOME%\platform-tools
 %ANDROID_HOME%\tools
