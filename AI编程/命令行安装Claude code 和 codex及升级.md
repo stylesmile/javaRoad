@@ -65,6 +65,11 @@ claude
 ### 3.1 安装 openai 包
 
 ```bash
+sudo npm install -g @openai/codex
+
+# 使用国内镜像安装更快
+sudo npm install -g @openai/codex --registry=https://registry.npmmirror.com
+
 npm install -g openai
 ```
 
