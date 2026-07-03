@@ -27,12 +27,17 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/plat
 打开终端，编辑 Shell 配置文件：
 
 nano ~/.bash_profile # 或者 ~/.zshrc
-复制
+
 添加以下内容：
 
 export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_HOME=~/Volumes/soft/ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-复制
+
+
+ccc@192 ~ % cat ~/.zshrc
+export ANDROID_HOME=/Users/ccc/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 保存并刷新配置：
 
 source ~/.bash_profile # 或 ~/.zshrc
