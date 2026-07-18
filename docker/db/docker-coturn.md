@@ -115,3 +115,8 @@ no-cli
 log-file=/var/log/turnserver.log
 verbose
 ```
+
+## 在线测试
+```
+https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
+```
