@@ -1,7 +1,12 @@
 简易版本
 
+## 不挂载
 ```
-docker run -d --name minio-server -p 9000:9000 -p 9001:9001 -e MINIO_ROOT_USER=minioadmin -e MINIO_ROOT_PASSWORD=minioadmin! --restart unless-stopped minio/minio server /data --console-address ":9001"
+docker run -d --name minio-server -p 9000:9000 -p 9001:9001 -e MINIO_ROOT_USER=minioadmin -e MINIO_ROOT_PASSWORD=minioadmin --restart unless-stopped minio/minio server /data --console-address ":9001"
+```
+
+## 挂载磁盘
+```
 docker run -d --name minio-server -p 9000:9000 -p 9001:9001 -e MINIO_ROOT_USER=minioadmin -e MINIO_ROOT_PASSWORD=minioadmin! -v minio-data:/data --restart unless-stopped minio/minio server /data --console-address ":9001"
 ```
 命令详解
