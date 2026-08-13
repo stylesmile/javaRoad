@@ -75,3 +75,21 @@ pmm-admin add mysql \
 pmm-admin list
 在输出结果中，确认 my-docker-mysql 对应的 mysqld_exporter 状态为 Running 即可。随后，你就可以登录 PMM 的 Web 界面查看该数据库的监控数据了。
 MySQL 容器映射到宿主机的端口是多少？我帮你把命令里的端口号填好。
+
+
+
+### 安装pmm客户端
+```
+wget https://repo.percona.com/apt/percona-release_latest.generic_all.deb
+
+dpkg -i percona-release_latest.generic_all.deb
+
+启用PMM客户端仓库：
+
+percona-release enable pmm3-client release
+
+安装PMM客户端包：
+
+apt update
+apt install -y pmm-client
+```
