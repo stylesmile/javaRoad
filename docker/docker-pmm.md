@@ -92,4 +92,7 @@ percona-release enable pmm3-client release
 
 apt update
 apt install -y pmm-client
+
+配置服务
+pmm-admin config --server-insecure-tls --server-url=https://admin:admin123@114.55.134.67:7443
 ```
