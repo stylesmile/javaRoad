@@ -16,4 +16,7 @@ percona/pmm-server:3
 
 docker run --detach --restart always --publish 7443:8443  --env PMM_METRICS_RESOLUTION=5s --volume pmm-data:/srv --name pmm-server percona/pmm-server:3
 
+默认账号密码
+admin/admin
+
 docker logs --tail=100 -f pmm-server
