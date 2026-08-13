@@ -1,7 +1,9 @@
+```docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
     "registry-mirrors": 
     [
+        "https://docker.xuanyuan.me",
         "https://mirror.ccs.tencentyun.com",
         "https://9rl160ta.mirror.aliyuncs.com",
         "https://docker.1ms.run",
@@ -13,6 +15,8 @@ tee /etc/docker/daemon.json <<-'EOF'
     ]
 }
 EOF
+```
+
 
 systemctl restart docker
 重启生效
@@ -22,5 +26,5 @@ systemctl restart docker
 "https://docker.m.daocloud.io",
 "https://docker.1ms.run",
 
-2026-0606更新
+2026-0813更新
 "https://docker.xuanyuan.me",
