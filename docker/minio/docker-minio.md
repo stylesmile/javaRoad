@@ -1,6 +1,7 @@
 简易版本
 
 解释
+```
 docker run -p 9000:9000 -p 9001:9001 \
 --net=host \
 --name minio \
@@ -9,6 +10,8 @@ docker run -p 9000:9000 -p 9001:9001 \
 -e "MINIO_SECRET_KEY=minioadmin" \
 minio/minio:RELEASE.2024-02-26T09-33-48Z server \
 /data --console-address ":9001" -address ":9000"
+```
+
 
 挂载硬盘
 
