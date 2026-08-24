@@ -1,6 +1,5 @@
-简易版本
+## 简易版本
 
-解释
 ```
 docker run -p 9000:9000 -p 9001:9001 \
 --net=host \
@@ -13,9 +12,10 @@ minio/minio:RELEASE.2024-02-26T09-33-48Z server \
 ```
 
 
-挂载硬盘
+## 挂载硬盘
 
-解释
+
+```
 docker run -d  -p 9000:9000 -p 9001:9001 \
 --name minio1  \
 -d --restart=always \
@@ -25,7 +25,9 @@ docker run -d  -p 9000:9000 -p 9001:9001 \
 -e "MINIO_ROOT_PASSWORD=minioadmin" \
 minio/minio:RELEASE.2024-02-26T09-33-48Z  server /data --console-address ":9001"
 
-命令详解
+```
+
+## 命令详解
 -e MINIO_ROOT_USER 指定用户名
 -e MINIO_ROOT_PASSWORD 指定密码
 -v 挂载目录,持久化minio目录 /data/minio/data 本机目录
