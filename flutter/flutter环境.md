@@ -7,3 +7,8 @@ export PATH = "你自己电脑的路径(非中文目录)/flutter/bin:$PATH"
 path
 D:\software-program\flutter3.41.9\bin
 ```
+
+powershell以管理员打开，并执行
+
+set-ExecutionPolicy RemoteSigned
+
